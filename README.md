@@ -31,6 +31,7 @@ var redshiftClient = require('./redshift.js');
 
 // options is an optional object with one property so far {raw: true} returns 
 // just the data from redshift. {raw: false} returns the data with the pg object
+// the first parameter of the callback is the error (null if the query was successfull) and the second is the result of the query
 redshiftClient.query(queryString, [options], callback);
 ```
 
